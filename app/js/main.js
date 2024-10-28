@@ -75,3 +75,21 @@ if (tabIndex !== null) {
         switchTab(index);
     }
 }
+
+
+// Функция для плавного скролла вверх
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Плавная прокрутка
+    });
+}
+
+// Находим элемент с классом next-lesson-wrapper и добавляем событие клика
+const nextLessonButton = document.querySelector('.next-lesson-wrapper');
+
+if (nextLessonButton) {
+    nextLessonButton.addEventListener('click', function() {
+        scrollToTop();
+    });
+}
