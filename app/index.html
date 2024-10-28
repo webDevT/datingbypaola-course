@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DatingByPaola course</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+
+	<!-- start main screen -->
+	<section class="main-screen">
+		<img src="img/photo1.png" alt="" class="mobile-photo">
+		<div class="container-fluid">
+
+			<div class="row">
+
+		
+
+					<div class="main-screen-content">
+						<div class="logo">
+						<a href="">
+							<img src="img/logo.svg" alt="">
+						</a>
+					</div>
+					<h1 class="h1">
+						Conexiones Auténticas: Estrategias de Mensajería para Relaciones Exitosas
+					</h1>
+		
+					<a href="" class="button">
+						Resume Course 
+					</a>
+					</div>			
+			</div>
+			
+
+		</div>
+	</section>
+	<!-- end main screen -->
+
+	<!-- start content section -->
+	<section class="content-section" id="lessons-list">
+		<div class="container-fluid">
+			<div class="row">
+
+				<div class="col-7">
+					<div class="item item--lessons">
+						<div class="item__title">
+							Course Contents
+						</div>
+						
+						<a href="lessons.html?tab=0" class="lesson-item">
+							<div class="lesson-cover">
+								<img src="img/cover1.png" alt="">
+							</div>
+							<div class="lesson-title">
+								LECCIÓN 1: Estrategia de Mensajes de Texto
+							</div>
+						</a>
+						
+						<a href="lessons.html?tab=1" class="lesson-item">
+							<div class="lesson-cover">
+								<img src="img/cover2.png" alt="">
+							</div>
+							<div class="lesson-title">
+								LECCIÓN 2: Cómo Pasar de la App a la Cita
+							</div>
+						</a>
+						
+						<a href="lessons.html?tab=2" class="lesson-item">
+							<div class="lesson-cover">
+								<img src="img/cover3.png" alt="">
+							</div>
+							<div class="lesson-title">
+								Lección 3: De Conocer en Persona a Concretar una Cita
+							</div>
+						</a>
+						
+						<a href="lessons.html?tab=3" class="lesson-item">
+							<div class="lesson-cover">
+								<img src="img/cover4.png" alt="">
+							</div>
+							<div class="lesson-title">
+								Lección 4: Conseguir la Segunda Cita
+							</div>
+						</a>
+						
+						<a href="lessons.html?tab=4" class="lesson-item">
+							<div class="lesson-cover">
+								<img src="img/cover5.png" alt="">
+							</div>
+							<div class="lesson-title">
+								Lección 5: Manteniendo el Impulso en la Comunicación
+							</div>
+						</a>
+						
+						<a href="lessons.html?tab=5" class="lesson-item">
+							<div class="lesson-cover">
+								<img src="img/cover6.png" alt="">
+							</div>
+							<div class="lesson-title">
+								Lección 6: Animando la Relación a Través de Mensajes Coquetos
+							</div>
+						</a>
+						
+						<a href="lessons.html?tab=6" class="lesson-item">
+							<div class="lesson-cover">
+								<img src="img/cover7.png" alt="">
+							</div>
+							<div class="lesson-title">
+								Lección 7: Superando Obstáculos en las Relaciones
+							</div>
+						</a>
+						
+						<a href="lessons.html?tab=7" class="lesson-item">
+							<div class="lesson-cover">
+								<img src="img/cover8.png" alt="">
+							</div>
+							<div class="lesson-title">
+								Lección 8: Reavivando Viejas Llamas
+							</div>
+						</a>
+						
+					</div>
+				</div>
+
+				<div class="col-5">
+
+					<div class="item">
+						<div class="item__title">
+							<p><span id="lessons-completed">0</span> of <span id="total-lessons">8</span> Lessons Completed</p>
+						</div>
+
+						<div class="progress-container">
+							<div class="progress-bar" id="progress-bar"></div>
+						</div>
+
+						<div id="progress" data-completed="0" data-total="8"></div>
+					
+
+					</div>
+
+					<div class="item">
+						<div class="item__title">
+							Instructor
+						</div>
+						<div class="instructor-item">
+							<img src="img/user-avatar.svg" alt="" class="instructor__avatar">
+							<div class="instructor__content">
+								<div class="insrtuctor__name">
+									Instructor Name
+								</div>
+								<div class="insrtuctor__position">
+									Instructor
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- end content section -->
+
+
+
+	<script src="js/main.js"></script>
+
+	<script>
+		window.onload = function() {
+    const progressElement = document.getElementById('progress');
+    const completedLessons = parseInt(progressElement.getAttribute('data-completed'));
+    const totalLessons = parseInt(progressElement.getAttribute('data-total'));
+
+    updateProgressBar(completedLessons, totalLessons);
+};
+
+function updateProgressBar(completedLessons, totalLessons) {
+    const progressBar = document.getElementById('progress-bar');
+    const lessonsCompletedText = document.getElementById('lessons-completed');
+    const totalLessonsText = document.getElementById('total-lessons');
+
+    let progressPercentage = (completedLessons / totalLessons) * 100;
+    progressBar.style.width = progressPercentage + '%';
+
+    lessonsCompletedText.textContent = completedLessons;
+    totalLessonsText.textContent = totalLessons;
+}
+
+
+	</script>
+</body>
+</html>

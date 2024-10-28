@@ -1,0 +1,282 @@
+@import "vars"
+@import "fonts"
+
+//start global style
+body 
+    font-family: $main-font
+    font-size: 19px 
+    font-weight: 400 
+    margin: 0 
+    padding: 0
+    background: #f9f8f6
+body,
+body * 
+    box-sizing: border-box
+.container-fluid 
+    width: 1200px 
+    max-width: 90vw
+    margin-left: auto 
+    margin-right: auto 
+//end global style
+
+//start header style 
+.header
+    padding-top: 15px 
+    padding-bottom: 15px
+    .container-fluid 
+        display: flex 
+        align-items: center
+.logo 
+    img 
+        width: 120px
+//end header style
+
+//start main screen style
+.main-screen 
+    padding-bottom: 0
+    background-color: #738591
+    color: #fff
+.button
+    background: #3535d6
+    color: #fff
+    padding: 12px 32px
+    font-weight: 500
+    font-size: 16px
+    text-decoration: none
+    border-radius: 50px
+    -webkit-transition: all .3s
+    -o-transition: all .3s
+    transition: all .3s
+    display: inline-block
+.row 
+    display: flex
+.flex-end 
+    display: flex 
+    align-items: flex-end
+    justify-content: center
+.h1 
+    font-size: 50px
+    line-height: 1.2
+    font-weight: 600
+    margin-top: 20px
+    margin-bottom: 50px
+.main-screen-content
+    padding-bottom: 50px
+    max-width: 75%
+.main-screen .container-fluid 
+    width: 1200px
+    padding-top: 70px
+    max-width: 90vw
+    background-image: url('../img/photo.png')
+    background-repeat: no-repeat
+    background-position: bottom right
+.mobile-photo 
+    display: none
+//end main screen style
+
+//start content section style 
+.content-section 
+    padding-top: 40px 
+    padding-bottom: 60px
+.col-7 
+    width: 60%
+    padding-left: 10px
+    padding-right: 10px
+.col-5 
+    width: 40%
+    padding-left: 10px
+    padding-right: 10px
+.col-8
+    width: 65%
+    padding-left: 10px
+    padding-right: 10px
+.col-4
+    width: 35%
+    padding-left: 10px
+    padding-right: 10px
+.item 
+    background: #fff
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .2)
+    border-radius: 3px
+    margin-bottom: 25px
+    padding: 20px
+.item__title
+    color: #738591
+    font-weight: 600
+    font-size: 24px
+    margin-bottom: 0px
+    padding-left: 0
+.lesson-cover
+    width: 130px
+    min-width: 130px
+    height: 70px 
+    img 
+        width: 100% 
+        height: 100% 
+        object-fit: cover 
+        object-position: center
+.lesson-item
+    display: flex 
+    align-items: center
+    padding-top: 15px 
+    padding-bottom: 15px
+    text-decoration: none
+    color: #738591
+.lesson-item:hover
+    color: #738591
+    text-decoration: underline
+.lesson-title
+    margin-left: 20px
+    font-size: 18px
+    color: #51575B
+.progress-container
+    width: 100%
+    background-color: #f3f3f3
+    border-radius: 25px
+    margin: 20px 0
+.progress-bar
+    height: 15px
+    width: 0
+    background-color: #4caf50
+    border-radius: 25px
+    text-align: center
+    line-height: 30px
+    color: white
+.instructor__avatar
+    width: 60px 
+    height: 60px
+.instructor-item
+    display: flex 
+    align-items: center
+.instructor__content
+    font-size: 14px
+    margin-left: 10px
+.insrtuctor__position
+    color: #3535d6
+iframe
+    width: 100%
+    height: 445px
+    margin-bottom: 12px
+.about-lesson
+    font-size: 14px
+    .item__title
+        padding-left: 0
+.lesson-status-btn 
+    display: flex 
+    justify-content: center 
+    align-items: center 
+    border: 1px solid 
+    border-radius: 5px
+.lesson-status-btn
+    display: flex 
+    justify-content: center 
+    align-items: center
+    display: flex 
+    align-items: center 
+    justify-content: center
+    margin-top: 20px 
+    font-size: 14px
+    font-weight: 600
+    padding-top: 8px 
+    padding-bottom: 8px
+    color: #0263A3
+    cursor: pointer
+    transition: all 0.5
+.lesson-status-btn:hover 
+    background: #0263A3
+    color: #fff
+.item__header
+    display: flex 
+    justify-content: space-between
+    align-items: center
+    font-size: 16px
+.item__header-title
+    font-weight: 700
+.item--black
+    background: #1d2939
+    color: #fff
+    padding-bottom: 0
+    padding-right: 0
+    padding-left: 0
+    padding-top: 0
+    margin-top: 45px
+    .item__header
+        color: #fff
+    .lesson-title
+        color: #fff
+        font-size: 14px
+    .lesson-cover 
+        width: 100px
+        min-width: 100px
+        height: 55px
+    .lesson-item:hover 
+        text-decoration: none
+.lessons-right
+    height: 428px
+.item__lessons-content
+    height: calc(100% - 44px)
+    overflow: auto
+.lesson-title
+    margin-left: 10px
+.item__header
+    padding: 10px 22px
+    padding-right: 30px
+.lesson-item
+    padding-right: 10px
+    cursor: pointer
+.lesson-item__num
+    padding-right: 10px
+    padding-left: 10px
+    font-size: 14px
+.lesson-item.active
+    background: #344054
+.tab_item
+    display: none
+    .item__title
+        padding-left: 0
+.tab_item:first-child
+    display: block
+//end content section style
+
+//start next style 
+.next-lesson-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-size: 14px
+    padding-top: 30px 
+    padding-bottom: 30px
+    cursor: pointer
+    display: none
+    .lesson-cover 
+        width: 200px 
+        height: 112px
+.next-lesson__left
+    display: flex
+    align-items: center
+.lesson-title 
+    font-size: 14px
+.next-lesson__btn
+    display: flex 
+    align-items: center
+    img
+        height: 12px
+        display: block 
+        margin-left: 5px
+.item__about-lesson
+    padding-bottom: 40px
+.next-lesson-wrapper.active 
+    display: flex
+.lesson-status-btn.active 
+    background: #0FC015
+    border: none 
+    color: #fff
+.back-btn 
+    display: none
+//end next style
+
+
+@import "media"
+
+
+
