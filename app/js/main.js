@@ -1,4 +1,3 @@
-
 const tabs = document.querySelectorAll('.tab');
 const tabItems = document.querySelectorAll('.tab_item');
 
@@ -60,13 +59,13 @@ buttons.forEach((button, index) => {
 });
 
 
-// Функция для получения значения параметра из URL
+
 function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
 }
 
-// Получаем номер таба из URL
+
 const tabIndex = getQueryParam('tab');
 
 if (tabIndex !== null) {
@@ -77,15 +76,14 @@ if (tabIndex !== null) {
 }
 
 
-// Функция для плавного скролла вверх
+
 function scrollToTop() {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth' // Плавная прокрутка
+        behavior: 'smooth' 
     });
 }
 
-// Находим элемент с классом next-lesson-wrapper и добавляем событие клика
 const nextLessonButton = document.querySelector('.next-lesson-wrapper');
 
 if (nextLessonButton) {
@@ -93,3 +91,26 @@ if (nextLessonButton) {
         scrollToTop();
     });
 }
+
+//start progres element 
+window.onload = function() {
+    const progressElement = document.getElementById('progress');
+    const completedLessons = parseInt(progressElement.getAttribute('data-completed'));
+    const totalLessons = parseInt(progressElement.getAttribute('data-total'));
+
+    updateProgressBar(completedLessons, totalLessons);
+};
+
+function updateProgressBar(completedLessons, totalLessons) {
+    const progressBar = document.getElementById('progress-bar');
+    const lessonsCompletedText = document.getElementById('lessons-completed');
+    const totalLessonsText = document.getElementById('total-lessons');
+
+    let progressPercentage = (completedLessons / totalLessons) * 100;
+    progressBar.style.width = progressPercentage + '%';
+
+    lessonsCompletedText.textContent = completedLessons;
+    totalLessonsText.textContent = totalLessons;
+}
+
+//end progres element
